@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Champion Your Success</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="bg-grid" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <h1 class="title" id="title">Champion Your Success</h1>
+      <p class="subtitle">
+        Quick, practical tips you can pin, share, and actually use.
+      </p>
+
+      <div class="controls">
+        <button class="btn" id="shuffleBtn" type="button">Shuffle Tips</button>
+        <button class="btn btn-ghost" id="resetPinsBtn" type="button">
+          Reset Pins
+        </button>
+      </div>
+    </header>
+
+    <main class="layout">
+      <section class="spotlight" aria-labelledby="spotlightHeading">
+        <div class="spotlight-header">
+          <h2 id="spotlightHeading">Spotlight Tip</h2>
+          <span class="badge" id="spotlightBadge">LIVE</span>
+        </div>
+
+        <article class="spotlight-card" id="spotlightCard">
+          <div class="spotlight-top">
+            <div class="dot dot-red" aria-hidden="true"></div>
+            <div class="dot dot-blue" aria-hidden="true"></div>
+            <div class="dot dot-white" aria-hidden="true"></div>
+          </div>
+          <h3 class="spotlight-title" id="spotlightTitle">Loading…</h3>
+          <p class="spotlight-text" id="spotlightText">Hang tight.</p>
+          <div class="spotlight-actions">
+            <button class="btn" id="nextTipBtn" type="button">Next Tip</button>
+            <button class="btn btn-ghost" id="copyTipBtn" type="button">
+              Copy Tip
+            </button>
+          </div>
+          <p class="hint">
+            Pro Tip: click any card to <strong>pin</strong> it to the top.
+          </p>
+        </article>
+      </section>
+
+      <section class="board" aria-labelledby="boardHeading">
+        <div class="board-header">
+          <h2 id="boardHeading">Bulletin Board</h2>
+          <div class="search">
+            <label class="sr-only" for="searchInput">Search tips</label>
+            <input
+              id="searchInput"
+              type="search"
+              placeholder="Search tips (ex: resume, time, teamwork)..."
+            />
+          </div>
+        </div>
+
+        <div class="tips" id="tipsGrid" aria-live="polite"></div>
+        <p class="footer-note">Built for momentum. Tiny habits, big wins.</p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <small>
+        Tip: Hover the title. Yes, it glows. No, it won’t do your homework
+        (unfortunately).
+      </small>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
